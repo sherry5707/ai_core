@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:text="等待接听"
+            android:textColor="@color/white_text_color"
+            android:textSize="50dp" />
+
+        <ImageView
+            android:id="@+id/other_head_img"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/silence_btn"
+                style="@style/button_v_style"
+                android:layout_marginLeft="346dp"
+                android:drawableTop="@mipmap/contact_btn_silence"
+                android:text="静音" />
+
+            <Button
+                android:id="@+id/camera_btn"
+                style="@style/camera_button_style"
+                android:layout_marginLeft="160dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/hangup_btn"
+            style="@style/button_h_style"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/contact_btn_hangup" />
+
+    </LinearLayout>
+</FrameLayout>

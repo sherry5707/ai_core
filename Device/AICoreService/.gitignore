@@ -1,0 +1,12 @@
+.idea/
+*.iml
+.gradle/
+local.properties
+build/
+controlJni/build/
+controlJni/jni/obj/
+xiaoweiSDKJni/build/
+xiaoweiSDKJni/jni/obj/
+*.o
+*.class
+*.d

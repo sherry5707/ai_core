@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_text_color">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_marginTop="50dp"
+            style="@style/name_text_style"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="24dp"
+            android:text="设备号: 1234567890"
+            android:textColor="#808080"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp">
+
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher" />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="582dp"
+                android:layout_marginTop="200dp"
+                android:src="@mipmap/ic_launcher"
+                android:background="@android:color/transparent"/>
+
+        </FrameLayout>
+
+        <Button
+            style="@style/button_v_style"
+            android:layout_marginTop="54dp"
+            android:layout_gravity="center_horizontal"
+            android:drawableTop="@mipmap/contact_btn_del"
+            android:text="删除"/>
+
+        <Button
+            android:layout_marginTop="60dp"
+            style="@style/button_h_style"
+            android:background="@mipmap/contact_btn_weak"
+            android:text="返回"
+            android:textColor="@color/white_text_color"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_text_color"
+        android:alpha="0.85"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:layout_gravity="center_horizontal"
+            android:text="确定删除该联系人吗？"
+            android:textSize="30dp"
+            android:textColor="@color/white_text_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+
+            <Button
+                android:layout_marginLeft="272dp"
+                style="@style/button_h_style"
+                android:background="@mipmap/contact_btn_weak"
+                android:text="返回"
+                android:textColor="@color/white_text_color"
+                android:textSize="25dp"/>
+
+            <Button
+                android:layout_marginLeft="30dp"
+                style="@style/button_h_style"
+                android:background="@mipmap/contact_btn_strong"
+                android:text="确定"
+                android:textColor="@color/white_text_color"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

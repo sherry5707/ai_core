@@ -1,0 +1,122 @@
+<resources>
+
+    <style name="LightTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="TabTextStyle">
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    //button
+
+    <style name="button_v_style">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="button_v_style2">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="camera_button_style">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">开启摄像头</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:drawableTop">@mipmap/contact_btn_camera_sel</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="button_h_style">
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="voip_calling_in_button_h_style2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="keyborad_button_stle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">36dp</item>
+        <item name="android:background">@drawable/btn_contacts_add_bg</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+
+    //text
+
+    <style name="time_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">00:00</item>
+    </style>
+
+    <style name="time_text_style2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">@dimen/calling_time_textsize</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">00:00</item>
+    </style>
+
+    <style name="name_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">50dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">亲见</item>
+    </style>
+
+    <style name="voip_calling_in_name_text_style2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">@dimen/calling_in_name_textsize</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="extra_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+</resources>

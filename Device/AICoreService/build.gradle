@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.41'
+
+    repositories {
+
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+            flatDir {
+                dirs '../common/libs'
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+
+    buildToolsVersion = "25.0.2"
+    compileSdkVersion = 25
+    minSdkVersion = 19
+    targetSdkVersion = 22
+    //时间：2018.2.6；每次修改版本号都要添加修改时间
+    //开发的版本号加dev后缀，发布时去掉dev后缀
+    versionCode = 146
+    versionName = "0.3.01"
+    debugVersionSuffix = "-dev"
+
+    javaVersion = JavaVersion.VERSION_1_8
+    // App dependencies version
+    supportLibraryVersion = "25.1.1"
+    retrofitVersion = "2.2.0"
+    rxjavaVersion = "1.2.7"
+    rxandroidVersion = "1.2.1"
+    glideVersion = "3.7.0"
+    okhttp3Version = "3.4.1"
+    okhttp3LoggingVersion = "3.4.1"
+    gsonVersion = "2.8.0"
+    zxingVersion = "3.2.1"
+    supportMultidex = "1.0.1"
+}

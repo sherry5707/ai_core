@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/black_text_color"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:hint="输入好友的设备号"
+        android:enabled="false"
+        android:focusable="false"
+        android:textColorHint="#808080"
+        android:textColor="@color/white_text_color"
+        android:gravity="center"/>
+
+    <GridLayout
+        android:layout_marginTop ="150dp"
+        android:layout_width="750dp"
+        android:layout_height="500dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_gravity="center_horizontal">
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="1" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="2" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="3" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="4" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="5" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button
+                style="@style/keyborad_button_stle"
+                android:text="6" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="7" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="8" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="9" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="*" />
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="12dp"
+                android:textColor="@color/white_text_color"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"/>
+        </FrameLayout>
+
+        <FrameLayout android:layout_width="250dp"
+            android:layout_height="120dp">
+            <Button style="@style/keyborad_button_stle"
+                android:text="#" />
+        </FrameLayout>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|center_horizontal">
+        <Button
+            android:layout_marginLeft="272dp"
+            style="@style/button_h_style"
+            android:background="@mipmap/contact_btn_weak"
+            android:text="返回"
+            android:textColor="@color/white_text_color"
+            android:textSize="25dp"/>
+
+        <Button
+            android:layout_marginLeft="30dp"
+            style="@style/button_h_style"
+            android:background="@mipmap/contact_btn_strong"
+            android:text="下一步"
+            android:textColor="@color/white_text_color"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+</FrameLayout>

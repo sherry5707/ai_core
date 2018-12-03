@@ -1,0 +1,11 @@
+include ':control', ':qlove_nlp',
+        ':genericskill',
+        ':wakeup',
+        ':xiaoweiSDK',
+//        ':app',
+//		':xiaoweisdkcommon',
+        ':voip',
+        ':common',
+        ':qloveaicore',
+        ':sdkinterface',
+		':speech2'

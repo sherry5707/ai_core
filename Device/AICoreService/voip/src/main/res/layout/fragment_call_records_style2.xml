@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/magellan_communication_pic_bj">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/record_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:paddingBottom="100dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/contacts_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="30dp"
+        android:text="联系人"
+        android:textColor="@color/black_text_color"
+        android:textSize="33dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/voip_record_empty"
+        android:textColor="@color/black_text_color"
+        android:textSize="53dp"
+        android:visibility="gone" />
+
+    <com.kinstalk.her.library.view.TryToSayTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/try_to_say_margin_top"
+        app:trytosayenum="try_voip"
+        android:textColor="@color/black_text_color"
+        android:textSize="26dp" />
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingBottom="@dimen/home_btn_paddingtop"
+        android:paddingLeft="@dimen/home_btn_paddingleft"
+        android:paddingRight="@dimen/home_btn_paddingleft"
+        android:paddingTop="@dimen/home_btn_paddingtop"
+        android:src="@mipmap/magellan_user_back" />
+
+</FrameLayout>

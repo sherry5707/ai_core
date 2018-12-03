@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/peercam_layout"
+    android:layout_width="@dimen/calling_close_camera_tips_width"
+    android:layout_height="@dimen/calling_close_camera_tips_height"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/btn_bg_peercam_close"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/calling_close_camera_tips_img_size"
+        android:layout_height="@dimen/calling_close_camera_tips_img_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/calling_close_camera_tips_img_marginleft"
+        android:background="@mipmap/magellan_toast_video_icon" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/calling_close_camera_tips_marginleft"
+        android:text="对方已关闭摄像头"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/calling_close_camera_tips_textsize" />
+
+</LinearLayout>

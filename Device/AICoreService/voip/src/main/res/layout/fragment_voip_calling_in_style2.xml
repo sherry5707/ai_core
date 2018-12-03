@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calling_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/magellan_call_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/voip_calling_in_name_text_style2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/calling_in_name_margintop" />
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/calling_in_waittext_margintop"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:text="@string/voip_calling_in_desc_video"
+        android:textColor="@color/white_text_color"
+        android:textSize="@dimen/calling_in_waittext_textsize" />
+
+
+    <!--
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+    -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head_img"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        android:background="@mipmap/contact_avatar_nofound"
+        android:padding="2dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/calling_in_bottom_padding">
+
+        <Button
+            android:id="@+id/refuse_btn"
+            style="@style/voip_calling_in_button_h_style2"
+            android:drawableTop="@mipmap/magellan_communication_icon_cancel"
+            android:text="挂断" />
+
+        <Button
+            android:id="@+id/accept_btn"
+            style="@style/voip_calling_in_button_h_style2"
+            android:layout_marginLeft="@dimen/calling_in_bottom_btn_leftmargin"
+            android:drawableTop="@mipmap/magellan_communication_icon_video"
+            android:text="接受邀请" />
+
+    </LinearLayout>
+
+</LinearLayout>

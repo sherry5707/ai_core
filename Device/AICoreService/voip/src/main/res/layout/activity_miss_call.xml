@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/magellan_miss_call_bg"
+    android:paddingLeft="60dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/misscall_layout_marginbottom"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/head_img"
+                android:layout_width="@dimen/misscall_head_size"
+                android:layout_height="@dimen/misscall_head_size"
+                android:background="@mipmap/magellan_home_call_img_small_empty"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/misscall_name_marginleft"
+                android:layout_marginRight="@dimen/misscall_name_marginleft"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="外婆"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/misscall_name_textsize" />
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/misscall_time_margintop"
+                    android:includeFontPadding="false"
+                    android:text="未接来电"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="@dimen/misscall_time_textsize" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/video_img"
+                android:layout_width="@dimen/misscall_callbtn_size"
+                android:layout_height="@dimen/misscall_callbtn_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="60dp"
+                android:background="@mipmap/magellan_home_icon_call_video" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/miss_call_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/misscall_calllist_title_margintop"
+            android:text="其他未接来电"
+            android:textColor="@color/white_text_color" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/miss_call_member_rv"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/misscall_calllist_margintop">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <com.kinstalk.her.library.view.TryToSayTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/misscall_call_trytosay_marginbottom"
+        app:trytosayenum="try_voip"
+        android:textColor="@color/white_text_color"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/ignore_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/misscall_call_ignorebtn_marginbottom"
+        android:layout_marginRight="46dp"
+        android:background="@mipmap/magellan_button_line"
+        android:text="忽略"
+        android:textColor="@color/white_text_color"
+        android:textSize="30dp" />
+
+</FrameLayout>

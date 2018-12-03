@@ -1,0 +1,31 @@
+<resources>
+    <string name="voip_app_name">联系人</string>
+    <string name="voip_silience">静音</string>
+    <string name="voip_camera">摄像头</string>
+    <string name="voip_record_empty">还没有通话记录哦</string>
+    <string name="voip_end_reason_busy">对方正忙暂时\n无法接听</string>
+    <string name="voip_end_reason_no_answer">无人应答</string>
+    <string name="voip_end_reason_normal">通话结束</string>
+    <string name="voip_end_reason_other_device_done">其他设备已处理</string>
+    <!--<string name="voip_guide_desc">1.需要用QQ登录腾讯云小微APP并绑定亲见;\n\n2.打开云小微APP，点击“我的-QQ好友设置-QQ代收开关”，需要成功添加好友；\n\n3.在亲见唤醒小微后，说出语音命令“开启QQ消息代收”，同时确保手机QQ在线，之后在手机QQ端确认授权即可；</string>-->
+    <string name="voip_guide_desc">1.手机上安装腾讯云小微APP，用QQ登录；\n\n2.打开云小微APP，点击\"我的-添加小微设备\"，扫描亲见设备上的二维码进行绑定；\n\n3.在云小微APP中点击已绑定的\"亲见人工智能视频音箱\"，点击添加家庭成员即可；</string>
+    <string name="voip_guide_desc_html_1">1.手机上安装腾讯云小微APP，用QQ登录；\n</string>
+    <string name="voip_guide_desc_html_2">2.打开云小微APP，点击<![CDATA[<font color="blue">\"我的-添加小微设备\"</font>]]>，扫描亲见设备上的二维码进行绑定；</string>
+    <string name="voip_guide_desc_html_3">3.在云小微APP中点击已绑定的<![CDATA[<font color="blue">\"亲见人工智能视频音箱\"</font>]]>，点击添加家庭成员即可；</string>
+    <string name="voip_guide_title">如何添加联系人？</string>
+    <string name="voip_guide_add_friend">如何添加好友？</string>
+    <string name="voip_notification_title">联系人</string>
+    <string name="voip_notification_miss_call">未接来电</string>
+    <string name="voip_notification_call_back">回拨</string>
+    <string name="voip_tips_other_net_bad">对方信号不稳定</string>
+    <string name="voip_tips_self_net_bad">你的信号不稳定</string>
+    <string name="voip_tips_net_bad">网络信号不稳定</string>
+    <string name="voip_tips_other_close_camera">对方关闭了摄像头</string>
+    <string name="voip_tips_other_close_mic">对方关闭了麦克风</string>
+
+    <string name="voip_calling_in_desc_video">正在邀请您进行视频聊天...</string>
+    <string name="voip_calling_in_desc_audio">正在邀请您进行语音聊天...</string>
+    <string name="voip_calling_out_wait_receive">正在等待对方接收视频邀请...</string>
+    <string name="try_to_say">尝试说 \"你好小微，给爸爸打电话\"</string>
+    <string name="try_to_say_hang_up">尝试说 \"你好小微，挂断\"</string>
+</resources>

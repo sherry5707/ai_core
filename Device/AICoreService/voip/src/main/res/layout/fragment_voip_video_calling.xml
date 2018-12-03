@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calling_calling_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/calling_name_text"
+            style="@style/name_text_style"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/calling_time_text"
+            style="@style/time_text_style"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="74dp"
+            android:text="00:00"/>
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/extra_text"
+        style="@style/extra_text_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:text=""
+        android:visibility="gone"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/head_img"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <com.kinstalk.her.voip.ui.view.VoipOptBtn
+                android:id="@+id/calling_silence_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.kinstalk.her.voip.ui.view.VoipOptBtn
+                android:id="@+id/calling_camera_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="158dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calling_hangup_btn"
+            style="@style/button_h_style"
+            android:layout_marginTop="64dp"
+            android:background="@mipmap/contact_btn_hangup" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply from: 'gradle-mvn-push.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        libraryVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.aar')) {
+                    if (variant.buildType.name.equals('release')) {
+                        def fileName = "sdk_interface.aar"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    } else if (variant.buildType.name.equals('debug')) {
+                        def fileName = "sdk_interface_debug-${versionName}.aar"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    compile project(':xiaoweisdkcommon')
+//    compile 'com.android.support:appcompat-v7:25.1.1'
+//    testCompile 'junit:junit:4.12'
+}

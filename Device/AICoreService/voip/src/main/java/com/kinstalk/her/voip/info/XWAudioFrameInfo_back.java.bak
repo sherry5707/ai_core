@@ -1,0 +1,53 @@
+package com.kinstalk.her.voip.info;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+/**
+ * Created by lenovo on 2018/5/21.
+ */
+
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class XWAudioFrameInfo implements Parcelable {
+
+    public byte[] data;
+    public int length;
+    public long time;
+
+    public XWAudioFrameInfo() {
+
+    }
+
+    protected XWAudioFrameInfo(Parcel in) {
+        data = in.createByteArray();
+        length = in.readInt();
+        time = in.readLong();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeByteArray(data);
+        dest.writeInt(length);
+        dest.writeLong(time);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<com.kinstalk.her.voip.info.XWAudioFrameInfo> CREATOR = new Creator<com.kinstalk.her.voip.info.XWAudioFrameInfo>() {
+        @Override
+        public com.kinstalk.her.voip.info.XWAudioFrameInfo createFromParcel(Parcel in) {
+            return new com.kinstalk.her.voip.info.XWAudioFrameInfo(in);
+        }
+
+        @Override
+        public com.kinstalk.her.voip.info.XWAudioFrameInfo[] newArray(int size) {
+            return new com.kinstalk.her.voip.info.XWAudioFrameInfo[size];
+        }
+    };
+}
+

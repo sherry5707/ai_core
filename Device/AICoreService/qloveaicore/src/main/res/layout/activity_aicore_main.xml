@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_aicore_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="kinstalk.com.qloveaicore.activity.AICoreMainActivity">
+
+    <ScrollView
+        android:id="@+id/tv_main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:padding="10dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_qq_head"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alpha="0.6"
+                android:text="使用手机QQ扫一扫绑定"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/get_weather_with_cb"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="GetWeatherWithCbOnClick"
+                android:text="Get weather info with callback"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_qcard_content"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:hint="请输入直达内容"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:minEms="1" />
+
+                <Button
+                    android:id="@+id/request_qcard_launch"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="RequestQcardLaunchOnClick"
+                    android:text="Qcard直达"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/news_pause"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="PauseNewsOnClick"
+                android:text="Pause News"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/news_next"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="NextNewOnClick"
+                android:text="Next News"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/news_prev"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="PreviewNewsOnClick"
+                android:text="Preview News"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/add_alarm"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="AddAlarmOnClick"
+                android:text="Add Alarm"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/get_alarm"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="GetAlarmOnClick"
+                android:text="Get Alarm"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_vedio_contacts"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/vedio_contacts"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_unbind"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/tx_unbind"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/createTask"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:onClick="AddUploadTaskOnClick"
+                android:text="@string/tx_add_uploadtask"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/tts_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_tts"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/play_tts"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="PlayTTSOnClick"
+                android:text="@string/play_tts" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

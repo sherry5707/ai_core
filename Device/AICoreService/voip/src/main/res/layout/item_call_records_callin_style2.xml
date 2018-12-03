@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/record_item_height"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/record_item_paddingright">
+
+
+            <ImageView
+                android:id="@+id/call_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/record_item_icon_marginleft"
+                android:background="@mipmap/contact_history_call" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/record_item_name_marginleft">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="妈妈"
+                    android:textColor="@color/record_number_color"
+                    android:textSize="@dimen/record_item_name_textsize" />
+
+                <TextView
+                    android:id="@+id/number_text"
+                    android:layout_width="@dimen/record_item_number_width"
+                    android:layout_height="@dimen/record_item_number_width"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/record_item_number_marginleft"
+                    android:layout_marginRight="@dimen/record_item_number_marginleft"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/record_number_color"
+                    android:background="@drawable/record_number_bg"
+                    android:textSize="@dimen/record_item_number_textsize" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="20:00"
+                android:textColor="#60000000"
+                android:textSize="@dimen/record_item_time_textsize" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/record_item_paddingright">
+
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="@dimen/record_item_delete_width"
+            android:layout_height="@dimen/record_item_delete_height"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_bg"
+            android:text="删除"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/record_item_delete_textsize" />
+
+    </FrameLayout>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

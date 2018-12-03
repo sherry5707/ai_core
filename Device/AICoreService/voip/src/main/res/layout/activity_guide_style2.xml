@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/guide_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/magellan_communication_pic_bj">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/magellan_guide_bg"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="174dp"
+        android:includeFontPadding="false"
+        android:text="@string/voip_guide_desc_html_1"
+        android:textColor="@color/black_text_color"
+        android:textSize="@dimen/size_60px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="297dp"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/black_text_color"
+        android:textSize="@dimen/size_60px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="478dp"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/black_text_color"
+        android:textSize="@dimen/size_60px"
+        android:visibility="gone" />
+
+
+    <com.kinstalk.her.library.view.TryToSayTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="33dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/black_text_color"
+        android:textSize="26dp"
+        app:trytosayenum="try_voip" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="onBackClick"
+        android:paddingBottom="@dimen/home_btn_paddingtop"
+        android:paddingLeft="@dimen/home_btn_paddingleft"
+        android:paddingRight="@dimen/home_btn_paddingleft"
+        android:paddingTop="@dimen/home_btn_paddingtop"
+        android:src="@mipmap/magellan_user_back" />
+
+</FrameLayout>

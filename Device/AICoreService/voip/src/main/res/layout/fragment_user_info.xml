@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/magellan_communication_pic_bj">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/userinfo_head_size"
+            android:layout_height="@dimen/userinfo_head_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/userinfo_head_margintop">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/head_img"
+                android:layout_width="@dimen/userinfo_head_size"
+                android:layout_height="@dimen/userinfo_head_size"
+                android:src="#50000000"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/name_first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white_text_color"
+                android:textSize="@dimen/userinfo_head_name_size" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/userinfo_name_margintop"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black_text_color"
+            android:textSize="@dimen/userinfo_name_textsize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/userinfo_bottom_margintop"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/audio_btn"
+                style="@style/button_v_style2"
+                android:layout_marginRight="@dimen/userinfo_bottom_btn_margin"
+                android:drawableTop="@mipmap/magellan_communication_icon_call"
+                android:text="语音"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/video_btn"
+                style="@style/button_v_style2"
+                android:drawableTop="@mipmap/magellan_communication_icon_video"
+                android:text="视频" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="正在等待该联系人接受邀请"
+            android:textColor="@color/white_text_color"
+            android:textSize="30dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.kinstalk.her.library.view.TryToSayTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/try_to_say_margin_top"
+        app:trytosayenum="try_voip"
+        android:textColor="@color/black_text_color"
+        android:textSize="26dp"/>
+
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingBottom="@dimen/home_btn_paddingtop"
+        android:paddingLeft="@dimen/home_btn_paddingleft"
+        android:paddingRight="@dimen/home_btn_paddingleft"
+        android:paddingTop="@dimen/home_btn_paddingtop"
+        android:src="@mipmap/magellan_user_back" />
+
+</FrameLayout>

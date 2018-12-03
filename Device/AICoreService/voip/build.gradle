@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+//        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url "http://nexus.shuzijiayuan.com/content/groups/public/"
+        }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+repositories{
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':xiaoweiSDK')
+    compile project(':common')
+    compile project(':control')
+
+
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:percent:$rootProject.supportLibraryVersion"
+
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //高斯模糊
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.kinstalk.android:baselibrary:1.2.1'
+    //侧滑删除
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    testCompile 'junit:junit:4.12'
+}

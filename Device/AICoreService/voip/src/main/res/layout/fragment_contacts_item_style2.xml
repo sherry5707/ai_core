@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/contact_item_layout_width"
+    android:layout_height="@dimen/contact_item_layout_height"
+    android:layout_marginRight="50dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/contact_item_imgsize"
+        android:layout_height="@dimen/contact_item_imgsize"
+        android:layout_gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/contact_item_imgsize"
+            android:layout_height="@dimen/contact_item_imgsize"
+            android:background="@mipmap/magellan_mask" />
+
+        <TextView
+            android:id="@+id/name_first_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white_text_color"
+            android:textSize="@dimen/contact_item_img_textsize" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/contact_item_name_margintop"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:maxWidth="@dimen/contact_item_layout_width"
+        android:text="小孙女小孙女"
+        android:textColor="@color/black_text_color"
+        android:textSize="@dimen/contact_item_name_textsize" />
+
+</LinearLayout>

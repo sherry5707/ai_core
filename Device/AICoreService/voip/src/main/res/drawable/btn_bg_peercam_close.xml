@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="@dimen/calling_close_camera_tips_height" />
+
+    <size
+        android:width="@dimen/calling_close_camera_tips_width"
+        android:height="@dimen/calling_close_camera_tips_height" />
+
+    <solid android:color="#2C2C2C" />
+
+</shape>

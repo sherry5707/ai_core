@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    android:background="#00D541"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60dp"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@color/white_text_color"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="33dp"
+        android:layout_toRightOf="@+id/name_text"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@color/white_text_color"
+        android:textSize="26dp" />
+
+
+    <com.kinstalk.her.library.view.TryToSayTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:textColor="@color/white_text_color"
+        android:textSize="26dp" />
+
+</RelativeLayout>

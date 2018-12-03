@@ -1,0 +1,137 @@
+def getHostKeyCode(boolean secert){
+    if( secert == true ) {
+        def env_secret = System.getenv('AICORE_SECERT_CODE');
+        if( env_secret ) {
+            return env_secret;
+        }
+        return "f5d5596d0bac56226c8dbe4b7d17343d"
+    }
+    else {
+        def env_key = System.getenv('AICORE_APP_CODE');
+        if( env_key ) {
+            return env_key;
+        }
+        return "15217787534583ce"
+    }
+}
+
+def getVoicePrintCfg() {
+    if ( System.getenv("build.isneed.VoicePrint") != "false" ){
+        return "true"
+    }
+    return "false"
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    signingConfigs {
+        debug {
+            storeFile file("../aicore_platform.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+//            keyAlias "magellan_debugkey"
+            keyPassword "android"
+
+        }
+        release {
+            storeFile file("../aicore_platform.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    defaultConfig {
+        applicationId "kinstalk.com.qloveaicore"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        buildConfigField 'String','APPKEY','"'+ getHostKeyCode(false)+'"'
+        buildConfigField 'String','SECRETKEY', '"'+getHostKeyCode(true)+'"'
+        buildConfigField 'Boolean','cfgVoicePrint', getVoicePrintCfg()
+        multiDexEnabled true
+    }
+
+    def isNeedVoiceLink
+    if (System.getenv("build.isneed.voicelink") == "1") {
+        isNeedVoiceLink = "true"
+    } else {
+        isNeedVoiceLink = "false"
+    }
+
+    buildTypes.each {
+        it.buildConfigField("boolean", "IS_NEED_VOICE_LINK", isNeedVoiceLink)
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField("boolean","IS_RELEASE","true")
+        }
+        debug {
+            buildConfigField("boolean","IS_RELEASE","false")
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    variant.mergedFlavor.versionName = rootProject.ext.versionName
+                    fileName = "AICoreService_${variant.mergedFlavor.versionName}_release.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    variant.mergedFlavor.versionName = rootProject.ext.versionName + rootProject.ext.debugVersionSuffix
+                    fileName = "AICoreService_${variant.mergedFlavor.versionName}_debug.apk"
+                }
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+//        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url "http://nexus.shuzijiayuan.com/content/groups/public/"
+        }
+        maven { url "https://jitpack.io" }
+    }
+}
+dependencies {
+    //    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //    })
+    //    compile 'com.android.support:appcompat-v7:26.+'
+    //    testCompile 'junit:junit:4.12'
+    compile project(path: ':sdkinterface')
+    compile project(path: ':common')
+    compile project(':control')
+    compile project(':xiaoweiSDK')
+    compile project(':wakeup')
+    compile project(':genericskill')
+    compile project(':qlove_nlp')
+    compile project(':voip')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':speech2')
+}

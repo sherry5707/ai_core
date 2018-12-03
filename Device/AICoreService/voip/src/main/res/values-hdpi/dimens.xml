@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_60px">40dp</dimen>
+    <dimen name="try_to_say_margin_top">33dp</dimen>
+    <dimen name="top_title_btn_textsize">33dp</dimen>
+    <dimen name="top_title_btn_margin_top">30dp</dimen>
+    <dimen name="bottom_guide_textsize">33dp</dimen>
+    <dimen name="contact_item_layout_width">200dp</dimen>
+    <dimen name="contact_item_layout_height">273dp</dimen>
+    <dimen name="contact_item_imgsize">160dp</dimen>
+    <dimen name="contact_item_img_textsize">77dp</dimen>
+    <dimen name="contact_item_name_margintop">33dp</dimen>
+    <dimen name="contact_item_name_textsize">33dp</dimen>
+    <dimen name="home_btn_paddingtop">28dp</dimen>
+    <dimen name="home_btn_paddingleft">56dp</dimen>
+    <dimen name="calling_in_name_margintop">195dp</dimen>
+    <dimen name="calling_in_name_textsize">77dp</dimen>
+    <dimen name="calling_in_waittext_margintop">40dp</dimen>
+    <dimen name="calling_in_waittext_textsize">40dp</dimen>
+    <dimen name="calling_in_bottom_padding">90dp</dimen>
+    <dimen name="calling_in_bottom_btn_leftmargin">191dp</dimen>
+    <dimen name="userinfo_head_margintop">153dp</dimen>
+    <dimen name="userinfo_head_size">206dp</dimen>
+    <dimen name="userinfo_head_name_size">100dp</dimen>
+    <dimen name="userinfo_name_margintop">33dp</dimen>
+    <dimen name="userinfo_name_textsize">53dp</dimen>
+    <dimen name="userinfo_bottom_margintop">90dp</dimen>
+    <dimen name="userinfo_bottom_btn_margin">161dp</dimen>
+    <dimen name="calling_name_margintop">195dp</dimen>
+    <dimen name="calling_desc_margintop">330dp</dimen>
+    <dimen name="calling_desc_textsize">40dp</dimen>
+    <dimen name="calling_time_textsize">53dp</dimen>
+    <dimen name="calling_close_camera_tips_margintop">20dp</dimen>
+    <dimen name="calling_close_camera_tips_height">93dp</dimen>
+    <dimen name="calling_close_camera_tips_width">533dp</dimen>
+    <dimen name="calling_close_camera_tips_img_size">40dp</dimen>
+    <dimen name="calling_close_camera_tips_img_marginleft">83dp</dimen>
+    <dimen name="calling_close_camera_tips_marginleft">17dp</dimen>
+    <dimen name="calling_close_camera_tips_textsize">40dp</dimen>
+
+    <dimen name="record_item_height">153dp</dimen>
+    <dimen name="record_item_paddingright">60dp</dimen>
+    <dimen name="record_item_icon_marginleft">43dp</dimen>
+    <dimen name="record_item_name_marginleft">62dp</dimen>
+    <dimen name="record_item_name_textsize">53dp</dimen>
+    <dimen name="record_item_number_textsize">33dp</dimen>
+    <dimen name="record_item_number_marginleft">26dp</dimen>
+    <dimen name="record_item_number_width">53dp</dimen>
+    <dimen name="record_item_time_textsize">33dp</dimen>
+    <dimen name="record_item_delete_width">167dp</dimen>
+    <dimen name="record_item_delete_height">87dp</dimen>
+    <dimen name="record_item_delete_textsize">33dp</dimen>
+
+    <dimen name="misscall_layout_marginbottom">100dp</dimen>
+    <dimen name="misscall_head_size">200dp</dimen>
+    <dimen name="misscall_name_marginleft">46dp</dimen>
+    <dimen name="misscall_name_textsize">76dp</dimen>
+    <dimen name="misscall_time_textsize">40dp</dimen>
+    <dimen name="misscall_time_margintop">44dp</dimen>
+    <dimen name="misscall_callbtn_size">120dp</dimen>
+    <dimen name="misscall_calllist_title_margintop">73dp</dimen>
+    <dimen name="misscall_calllist_margintop">32dp</dimen>
+    <dimen name="misscall_call_trytosay_marginbottom">45dp</dimen>
+    <dimen name="misscall_call_ignorebtn_marginbottom">30dp</dimen>
+
+
+</resources>

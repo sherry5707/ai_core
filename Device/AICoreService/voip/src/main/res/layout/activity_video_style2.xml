@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tencent.av.ui.DeviceVideoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dv_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tencent.av.ui.DeviceVideoView
+            android:id="@+id/big_dv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/peer_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+
+        <com.tencent.av.ui.DeviceVideoView
+            android:id="@+id/small_dv"
+            android:layout_width="200dp"
+            android:layout_height="166dp"
+            android:layout_gravity="right" />
+
+        <ImageView
+            android:id="@+id/big_loading_img"
+            android:layout_width="115dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/magellan_video_loading"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+</com.tencent.av.ui.DeviceVideoFrameLayout>

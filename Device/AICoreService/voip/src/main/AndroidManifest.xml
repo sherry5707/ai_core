@@ -1,0 +1,100 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.kinstalk.her.voip">
+
+
+    <permission
+        android:name="BROADCAST_PERMISSION_DEVICE_EVENT_1_7"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="BROADCAST_PERMISSION_DEVICE_EVENT_1_7" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="com.kinstalk.her.voipcall.chat" />
+    <uses-permission android:name="com.tencent.device.broadcast.permission" />
+
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activity.ContactsAddActivity"
+            android:theme="@style/LightTheme"></activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/voip_app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:launchMode="singleTask"
+            android:theme="@style/LightTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.RecordsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LightTheme" />
+
+        <activity
+            android:name=".activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LightTheme"></activity>
+
+        <activity
+            android:name=".activity.GuideStyle2Activity"
+            android:launchMode="singleTask"
+            android:theme="@style/LightTheme"></activity>
+
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:theme="@style/LightTheme" />
+
+        <activity
+            android:name=".activity.MissCallActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LightTheme" />
+
+        <receiver
+            android:name=".recevier.MissCallReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kinstalk.her.voip.ACTION_CALL_BACK" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kinstalk.her.voip.ACTION_NOTIFY_CLEAR" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.FloatService"
+            android:process=":audio" />
+
+        <service android:name="com.tencent.av.XWAVChatAIDLService">
+            <intent-filter android:priority="1000">
+                <action android:name="com.tencent.xiaowei.RemoteTXDeviceCoreService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

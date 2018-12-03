@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_text_color">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        style="@style/name_text_style"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="设备号 1234567890"
+        android:textColor="@color/white_text_color"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:includeFontPadding="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="140dp">
+
+        <Button
+            android:layout_marginLeft="272dp"
+            style="@style/button_h_style"
+            android:background="@mipmap/contact_btn_weak"
+            android:text="返回"
+            android:textColor="@color/white_text_color"
+            android:textSize="25dp"/>
+
+        <Button
+            android:layout_marginLeft="30dp"
+            style="@style/button_h_style"
+            android:background="@mipmap/contact_btn_strong"
+            android:text="添加"
+            android:textColor="@color/white_text_color"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
